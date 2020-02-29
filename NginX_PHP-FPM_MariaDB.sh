@@ -3,11 +3,11 @@ clear
 echo -e "======= \e[32mNginX\033[0m + \e[32mPHP-FPM\033[0m + \e[32mMariaDB\033[0m By \e[36mAriaData.Co\033[0m  =======\n========================================================="
 read -e -p $'Install \e[33mwebmin\033[0m on Port \e[33m10000\033[0m ? [\e[32my\033[0m|\e[31mn\033[0m] : ' -i "y" install_webmin
 read -e -p $'Set \e[33mSSH Port\033[0m ? (for default Enter \e[33m22\033[0m ) : ' -i "22" ssh_port_number
-read -e -p $'Enter \e[33mSite Main Folder Name\033[0m ? ( without \e[33mwww\033[0m ) : ' -i "public_html" www_folder_name
-read -e -p $'Enter \e[33mDomains by FQDN\033[0m ? ( seperate by \e[33mspace\033[0m , exp: \e[32msample.com www.sample.com\033[0m ) : \n' domains
-read -e -p $'Select \e[33mPHP Version\033[0m ? [\e[33m71\033[0m|\e[33m72\033[0m|\e[33m73\033[0m|\e[33m74\033[0m] : ' -i "74" php_version
-read -e -p $'Select \e[33mMariaDB Version\033[0m ? [\e[33m10.1\033[0m|\e[33m10.2\033[0m|\e[33m10.3\033[0m|\e[33m10.4\033[0m|\e[33m10.5\033[0m] : ' -i "10.4" mariadb_version
-read -e -p $'Enter \e[33mMariaDB root Password\033[0m : ' mariadb_root_password
+read -e -p $'\e[33mSite Main Folder Name\033[0m ? ( without \e[33mwww\033[0m ) : ' -i "public_html" www_folder_name
+read -e -p $'Enter \e[33mDomains by FQDN\033[0m ? ( seperate by \e[33mspace\033[0m , exp: \e[32mtest.com www.test.com\033[0m ) : \n' domains
+read -e -p $'\n\e[33mPHP Version\033[0m ? [\e[33m71\033[0m|\e[33m72\033[0m|\e[33m73\033[0m|\e[33m74\033[0m] : ' -i "74" php_version
+read -e -p $'\e[33mMariaDB Version\033[0m ? [\e[33m10.1\033[0m|\e[33m10.2\033[0m|\e[33m10.3\033[0m|\e[33m10.4\033[0m|\e[33m10.5\033[0m] : ' -i "10.4" mariadb_version
+read -e -p $'\e[33mMariaDB root Password\033[0m : ' mariadb_root_password
 read -e -p $'Install \e[33mPHPMyAdmin\033[0m ? [\e[32my\033[0m|\e[31mn\033[0m]: ' -i "y" pma_install
 if [[ $pma_install =~ ^([Yy])$ ]]
 then
