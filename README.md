@@ -6,3 +6,7 @@
 ```sh
 cd /root && curl -o installer.sh -L https://raw.githubusercontent.com/ariadata/Shell-Installers/master/gitea_C7_Installer.sh && sh installer.sh
 ```
+#### Nginx , PHP-FPM , MariaDb , Webmin , PHPMyAdmin Installer (by Select):
+```sh
+cd /root && curl -o installer.sh -L https://raw.githubusercontent.com/ariadata/Shell-Installers/master/NginX_PHP-FPM_MariaDB.sh && sh installer.sh
+```
