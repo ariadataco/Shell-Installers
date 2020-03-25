@@ -114,8 +114,8 @@ chmod 777 /var/lib/php -R
 yum clean all
 yum update -y
 ##########################################
-systemctl enable nginx mariadb php-fpm webmin
-systemctl restart nginx mariadb php-fpm webmin
+systemctl enable nginx mariadb php-fpm
+systemctl restart nginx mariadb php-fpm
 clear
 echo -e "\n======================================================\n======== \e[32mInstallation Completed Successfully!\033[0m ========\n======================================================\n"
 read -e -p $'Do You Want to \e[33mReboot System NOW\033[0m ? [\e[32my\033[0m|\e[31mn\033[0m] : ' -i "y" reboot_at_end
