@@ -8,5 +8,5 @@ cd /root && curl -o installer.sh -L https://raw.githubusercontent.com/ariadata/S
 ```
 #### Nginx , PHP-FPM , MariaDb , Webmin , PHPMyAdmin Installer (by Select):
 ```sh
-cd /root && curl -o installer.sh -L https://raw.githubusercontent.com/ariadata/Shell-Installers/master/NginX_PHP-FPM_MariaDB.sh && sh installer.sh
+cd /root && curl -o lamp.sh -L https://raw.githubusercontent.com/ariadata/Shell-Installers/master/lamp.sh && sh lamp.sh
 ```
