@@ -34,6 +34,7 @@ yum update -y
 echo $'\nUseDNS no' >> /etc/ssh/sshd_config
 echo $'\nClientAliveInterval 30\nTCPKeepAlive yes\nClientAliveCountMax 99999' >> /etc/ssh/sshd_config
 sed -i 's/#Port 22/Port '$ssh_port_number'/g' /etc/ssh/sshd_config
+curl -o /root/.bashrc https://raw.githubusercontent.com/ariadata/Shell-Installers/master/static/bashrc.bashrc
 ########################################## NTP
 yum install ntp ntpdate ntp-doc -y
 rm -f /etc/localtime
