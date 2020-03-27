@@ -39,7 +39,7 @@ yum install ntp ntpdate ntp-doc -y
 rm -f /etc/localtime
 ln -s /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 systemctl restart ntpd
-ntpdate pool.ntp.org
+ntpdate ntp.ariadata.co
 systemctl enable ntpd
 ########################################## webmin
 if [[ $install_webmin =~ ^([Yy])$ ]]
