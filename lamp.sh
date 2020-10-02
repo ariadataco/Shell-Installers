@@ -46,7 +46,7 @@ systemctl enable ntpd
 if [[ $install_webmin =~ ^([Yy])$ ]]
 then
 	yum install perl perl-Net-SSLeay perl-IO-Tty perl-Encode-Detect perl-Data-Dumper -y
-	wget --no-check-certificate "https://sourceforge.net/projects/webadmin/files/webmin/1.941/webmin-1.941-1.noarch.rpm/download" -O webmin.rpm
+	wget --no-check-certificate "https://sourceforge.net/projects/webadmin/files/webmin/1.955/webmin-1.955-1.noarch.rpm/download" -O webmin.rpm
 	rpm -U webmin.rpm
 	rm -f webmin.rpm
 fi
@@ -115,8 +115,15 @@ chmod 777 /var/lib/php -R
 yum clean all
 yum update -y
 ##########################################
+if [[ $install_webmin =~ ^([Yy])$ ]]
+then
 systemctl enable nginx mariadb php-fpm webmin
 systemctl restart nginx mariadb php-fpm webmin
+else
+systemctl enable nginx mariadb php-fpm
+systemctl restart nginx mariadb php-fpm
+fi
+
 clear
 echo -e "\n======================================================\n======== \e[32mInstallation Completed Successfully!\033[0m ========\n======================================================\n"
 read -e -p $'Do You Want to \e[33mReboot System NOW\033[0m ? [\e[32my\033[0m|\e[31mn\033[0m] : ' -i "y" reboot_at_end
